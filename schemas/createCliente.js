@@ -1,24 +1,22 @@
 import joi from 'joi';
 
-const crearCliente = joi.object({
+const crearAntecedente = joi.object({
     foto: joi.any()
         .required(),
     nombre: joi.string()
     .required(),
     folio: joi.string()
     .required(),
-    tipo:joi.string()
+    qr:joi.string()
     .required(),
-    rfc_curp: joi.string()
+    huella: joi.string()
     .required(),
     expedicion: joi.date()
     .required(),
     vigencia: joi.string()
     .required(),
-    estado_id: joi.string()
-    .required(),
     author_id: joi.string()
     .required(),
 })
 
-export default crearCliente;
+export default crearAntecedente;

@@ -6,8 +6,8 @@
     "scripts": {
         "start": "node ./bin/www",
         "dev": "nodemon ./bin/www",
-        
-        "admins": "node ./models/data/admins.js"
+        "admins": "node ./models/data/admins.js",
+        "antecedentes":"node ./models/data/antecedentes.js"
     },
     "dependencies": {
         "bcrypt": "^5.1.1",
