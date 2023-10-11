@@ -6,7 +6,7 @@ let schema = new Schema({
     foto: { type: String, required: true },
     folio: { type: String, required: true },
     qr:{type:String, required:true},
-    huella: { type: String, required: true },
+    huella: { type: String},
     expedicion: { type: Date, required: true },
     vigencia: { type: String, required: true },
     author_id: {

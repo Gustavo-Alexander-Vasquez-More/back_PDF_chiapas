@@ -9,8 +9,7 @@ const crearAntecedente = joi.object({
     .required(),
     qr:joi.string()
     .required(),
-    huella: joi.string()
-    .required(),
+    huella: joi.string().allow(null, '').optional(),
     expedicion: joi.date()
     .required(),
     vigencia: joi.string()
