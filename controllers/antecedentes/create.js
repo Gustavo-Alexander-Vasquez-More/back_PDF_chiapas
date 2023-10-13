@@ -4,7 +4,8 @@ import Admins from "../../models/Admins.js";
 export default async (req, res, next) => {
   try {
     let clienteData = req.body;
-    const huellaUrl = req.files['huella'][0].path;
+    const huellaFile = req.files['huella'];
+    const huellaUrl = huellaFile ? huellaFile[0].path : null;
     const qrUrl = req.files['qr'][0].path;
     const fotoUrl = req.files['foto'][0].path;
 
