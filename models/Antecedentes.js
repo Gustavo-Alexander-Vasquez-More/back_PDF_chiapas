@@ -8,6 +8,7 @@ let schema = new Schema({
     qr:{type:String, required:true},
     huella: { type: String},
     expedicion: { type: String, required: true },
+    hora:{type: String, required: true},
     vigencia: { type: String, required: true },
     author_id: {
         type:Types.ObjectId,
