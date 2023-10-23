@@ -4,6 +4,7 @@ try {
     const folio=await Antecedentes.findOne({folio:req.body.folio})
     if(folio){
         return res.status(400).json({
+            response:null,
             success: false,
             message: 'Este Folio ya esta existe'
     })
