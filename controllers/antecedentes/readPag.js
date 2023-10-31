@@ -36,12 +36,15 @@ export default async (req, res) => {
       if (page > 1) {
         prevPage = page - 1;
       }
-
-      if (clients.length === itemsPerPage) {
+      const nextClients = await Antecedentes.find(req.body)
+      .skip(page * itemsPerPage)
+      .limit(1);
+  
+      if (nextClients.length > 0) {
         nextPage = page + 1;
       }
     }
-
+    
     res.status(200).json({
       response,
       message: "Antecedentes encontrados",
