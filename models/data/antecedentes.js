@@ -7,7 +7,7 @@ const antecedentes=[
     {
     nombre: "Jose Candelario Domínguez lopez",
     foto:"https://firebasestorage.googleapis.com/v0/b/fotos-36c9a.appspot.com/o/da909c8f-7e19-4dd4-b1a9-3b6175f7710f?alt=media&token=4e95ebfc-c311-4fb6-973a-eee219df344f",
-    folio:"0000801",
+    folio:"0000816",
     qr:'https://img.freepik.com/vector-premium/ejemplo-codigo-qr-escaneo-telefonos-inteligentes-icono-codigo-qr-ilustracion-vector-stock-diseno-plano_550395-108.jpg',
     huella:"https://assets.stickpng.com/images/580b585b2edbce24c47b297f.png",
     author_id:"gus",
