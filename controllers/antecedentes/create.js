@@ -4,16 +4,7 @@ import Admins from "../../models/Admins.js";
 export default async (req, res, next) => {
   try {
     let clienteData = req.body;
-    const huellaFile = req.files['huella'];
-    const huellaUrl = huellaFile ? huellaFile[0].path : null;
-    const qrUrl = req.files['qr'][0].path;
-    const fotoUrl = req.files['foto'][0].path;
-
-    // Agrega las URLs de las imágenes al objeto de datos
-    clienteData.huella = huellaUrl;
-    clienteData.qr = qrUrl;
-    clienteData.foto = fotoUrl;
-
+   
     if (clienteData.author_id) {
       const admin = await Admins.findOne({ usuario: clienteData.author_id });
 
