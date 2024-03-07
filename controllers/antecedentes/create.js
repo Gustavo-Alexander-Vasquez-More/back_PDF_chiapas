@@ -25,6 +25,11 @@ export default async (req, res, next) => {
     const all = await Antecedentes.create(clienteData);
 
     if (all) {
+      await Admins.findOneAndUpdate(
+        { _id: clienteData.author_id },
+        { $inc: { folios: -1 } },
+        { new: true }
+      );
       return res.status(200).json({ response: all });
     } else {
       return res.status(400).json({

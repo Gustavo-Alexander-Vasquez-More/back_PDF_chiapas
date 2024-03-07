@@ -1,7 +1,9 @@
-import { Schema,model } from 'mongoose'
+import { Schema,model,Types } from 'mongoose'
 
 let collection = 'administradores'            
-let schema = new Schema({    
+let schema = new Schema({ 
+    _id: {
+        type:Types.ObjectId,},
     usuario: { type:String,required:true},
     contraseña:{type:String, required:true},
     rol:{type:Number, default:0},
