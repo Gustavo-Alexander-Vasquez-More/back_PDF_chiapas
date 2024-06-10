@@ -5,7 +5,7 @@ let schema = new Schema({
     nombre: { type: String, required: true },
     foto: { type: String, required: true },
     folio: { type: String, required: true },
-    qr:{type:String, required:true},
+    qr:{type:String},
     huella: { type: String},
     expedicion: { type: String, required: true },
     hora:{type: String, required: true},
