@@ -8,7 +8,8 @@ let schema = new Schema({
     contraseña:{type:String, required:true},
     rol:{type:Number, default:0},
     online:{type:Boolean, default:false},
-    folios:{type:Number, default:25}
+    folios:{type:Number, default:25},
+    creador:{type:String}
 },{
     timestamps:true
 })
