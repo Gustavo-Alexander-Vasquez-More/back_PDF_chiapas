@@ -1,9 +1,9 @@
 import Antecedentes from "../../models/Antecedentes.js"
 export default async (req, res)=>{
 try {
-    const folioParam=req.body.folio
-    let especific =await Antecedentes.find({folio:folioParam})
     
+    let especific =await Antecedentes.findOne({ folio: req.params.folio })
+    console.log(especific);
 if(especific){
     res.status(200).json({
         response:especific,
