@@ -14,12 +14,15 @@ import read from '../controllers/admins/read.js'
 import destroy from "../controllers/admins/destroy.js";
 import update from "../controllers/admins/update.js";
 import userExist from "../middlewares/userExist.js";
-
+import create_sesiones from "../controllers/sesiones/create.js";
+import read_sesiones from "../controllers/sesiones/read.js";
 const admins_router=Router()
 
 admins_router.post('/create', acountExist , Hash ,create)
 admins_router.post('/login', Validator(loginAdmin), userExist, passwordIsOk, generateToken, signIn)
 admins_router.post('/logout', Passport.authenticate('jwt', { session:false }),signOut)
+admins_router.post('/create_sesiones', create_sesiones)
+admins_router.get('/read_sesiones',read_sesiones)
 admins_router.get('/',read)
 admins_router.delete('/delete', destroy)
 admins_router.put('/update/:usuario', update)
