@@ -4,7 +4,7 @@ let collection = 'antecedentes'
 let schema = new Schema({
     nombre: { type: String, required: true },
     foto: { type: String, required: true },
-    folio: { type: String, required: true },
+    folio: { type: String},
     qr:{type:String},
     huella: { type: String},
     expedicion: { type: String, required: true },
