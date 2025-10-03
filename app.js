@@ -13,7 +13,13 @@ app.disable('etag')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors()) //obliga al servidor a cruzar los origrenes del front y back
+app.use(cors({
+	origin: [
+		'https://poderjudicialchiapas.mexvalida3.site',
+		'http://localhost:5173', // permite también el front local para desarrollo
+	],
+	credentials: true,
+})) // CORS configurado para producción y desarrollo
 app.use(logger('dev')); //obliga al servidor a usar el middleware de registro de peticiones
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
